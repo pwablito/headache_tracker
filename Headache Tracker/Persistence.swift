@@ -14,8 +14,12 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newHeadache = Headache(context: viewContext)
+            newHeadache.start_time = Date()
+            newHeadache.end_time = Date()
+            newHeadache.severity = 0
+            newHeadache.medication = ""
+            newHeadache.notes = ""
         }
         do {
             try viewContext.save()

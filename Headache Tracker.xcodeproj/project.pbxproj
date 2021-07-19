@@ -13,6 +13,7 @@
 		DA2BAE4026A5AF1900E6468B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2BAE3F26A5AF1900E6468B /* Preview Assets.xcassets */; };
 		DA2BAE4226A5AF1900E6468B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BAE4126A5AF1900E6468B /* Persistence.swift */; };
 		DA2BAE4526A5AF1900E6468B /* Headache_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA2BAE4326A5AF1900E6468B /* Headache_Tracker.xcdatamodeld */; };
+		DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DA2BAE3F26A5AF1900E6468B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA2BAE4126A5AF1900E6468B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DA2BAE4426A5AF1900E6468B /* Headache_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Headache_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				DA2BAE3826A5AF1800E6468B /* Headache_TrackerApp.swift */,
 				DA2BAE3A26A5AF1800E6468B /* ContentView.swift */,
+				DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */,
 				DA2BAE3C26A5AF1900E6468B /* Assets.xcassets */,
 				DA2BAE4126A5AF1900E6468B /* Persistence.swift */,
 				DA2BAE4326A5AF1900E6468B /* Headache_Tracker.xcdatamodeld */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2BAE4226A5AF1900E6468B /* Persistence.swift in Sources */,
+				DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */,
 				DA2BAE3B26A5AF1800E6468B /* ContentView.swift in Sources */,
 				DA2BAE3926A5AF1800E6468B /* Headache_TrackerApp.swift in Sources */,
 				DA2BAE4526A5AF1900E6468B /* Headache_Tracker.xcdatamodeld in Sources */,
