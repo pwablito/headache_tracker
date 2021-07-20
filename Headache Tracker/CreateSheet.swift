@@ -15,11 +15,13 @@ struct CreateSheet: View {
     // For closing the sheet
     @Environment(\.presentationMode) var presentationMode
     
-    @State var severity = 1
-    @State var notes = ""
-    @State var medication = ""
-    @State var start_time = Date()
-    @State var end_time = Date()
+    @State var severity: Int = 1
+    @State var notes: String = ""
+    @State var medication: String = ""
+    @State var start_time: Date = Date()
+    @State var end_time: Date = Date()
+    @State var ongoing: Bool = true
+
     func close() {
         presentationMode.wrappedValue.dismiss()
     }
@@ -34,11 +36,16 @@ struct CreateSheet: View {
                     ) {
                         Text("Start time")
                     }
-                    DatePicker(
-                        selection: $end_time,
-                        displayedComponents: [.date, .hourAndMinute]
-                    ) {
-                        Text("End time")
+                    Toggle(isOn: $ongoing) {
+                        Text("Ongoing")
+                    }
+                    if (!ongoing) {
+                        DatePicker(
+                            selection: $end_time,
+                            displayedComponents: [.date, .hourAndMinute]
+                        ) {
+                            Text("End time")
+                        }
                     }
                     Stepper("Severity: \(severity) ", value: $severity, in: 1...10)
                 }
@@ -48,7 +55,7 @@ struct CreateSheet: View {
                     TextField("Notes", text: $notes)
                 }
             }
-            .navigationTitle("Add Order")
+            .navigationTitle("New Headache")
             .navigationBarItems(
                 leading: Button(
                     action: {
@@ -60,7 +67,13 @@ struct CreateSheet: View {
                     action: {
                         let new_headache = Headache(context: viewContext)
                         new_headache.start_time = start_time
-                        new_headache.end_time = end_time
+                        new_headache.ongoing = ongoing
+                        if !ongoing {
+                            new_headache.end_time = end_time
+                        }
+                        else {
+                            new_headache.end_time = nil
+                        }
                         new_headache.severity = Int64(severity)
                         new_headache.medication = medication
                         new_headache.notes = notes
