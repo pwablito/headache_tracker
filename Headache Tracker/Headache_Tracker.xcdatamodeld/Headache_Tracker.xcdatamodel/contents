@@ -5,14 +5,13 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="medication" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="ongoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="severity" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="sleep_hours" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="start_time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="stress_level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="water_consumption" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="water_consumption" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Headache" positionX="-34.86004638671875" positionY="78.4322509765625" width="128" height="179"/>
+        <element name="Headache" positionX="-34.86004638671875" positionY="78.4322509765625" width="128" height="164"/>
     </elements>
 </model>
