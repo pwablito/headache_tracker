@@ -26,28 +26,23 @@ struct HeadachesView: View {
         }
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        formatter.timeStyle = .short
         return formatter.string(from: date!)
     }
-    
 
     var body: some View {
         NavigationView {
             List {
                 ForEach (headaches) { headache in
                     NavigationLink(
-                        destination: List {
-                            Text("Start: \(format_date(date: headache.start_time))")
-                            Text("End: \(format_date(date: headache.end_time))")
-                            Text("Severity: \(headache.severity)")
-                            Text("Medication: " + (headache.medication ?? "None"))
-                            Text("Notes: " + (headache.notes ?? "None"))
-                        }
+                        destination: HeadacheView(headache: headache)
                     ) {
                         HStack {
                             Text("Start: \(format_date(date: headache.start_time!))")
                             if headache.end_time != nil {
-                                Text("End: \(format_date(date: headache.end_time))")
+                                let diffComponents = Calendar.current.dateComponents([.hour, .minute], from: headache.start_time!, to: headache.end_time!)
+                                    let hours = diffComponents.hour
+                                    let minutes = diffComponents.minute
+                                    Text("Duration: \(hours ?? 0):\(minutes ?? 0)")
                             } else {
                                 Text("Ongoing")
                                     .foregroundColor(Color.red)

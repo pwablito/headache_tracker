@@ -16,11 +16,13 @@ struct CreateSheet: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var severity: Int = 1
+    @State var stress_level: Int = 1
     @State var notes: String = ""
     @State var medication: String = ""
     @State var start_time: Date = Date()
     @State var end_time: Date = Date()
     @State var ongoing: Bool = true
+    @State var water_consumption: Int = 0
 
     func close() {
         presentationMode.wrappedValue.dismiss()
@@ -51,6 +53,8 @@ struct CreateSheet: View {
                 }
                 
                 Section(header: Text("Additional Information")) {
+                    Stepper("Stress level: \(stress_level)", value: $stress_level, in: 1...10)
+                    Stepper("Water consumption: \(water_consumption)", value: $water_consumption, in: 0...10000)
                     TextField("Medication", text: $medication)
                     TextField("Notes", text: $notes)
                 }
@@ -67,7 +71,6 @@ struct CreateSheet: View {
                     action: {
                         let new_headache = Headache(context: viewContext)
                         new_headache.start_time = start_time
-                        new_headache.ongoing = ongoing
                         if !ongoing {
                             new_headache.end_time = end_time
                         }
@@ -85,6 +88,8 @@ struct CreateSheet: View {
                         } catch {
                             print(error.localizedDescription)
                         }
+                        new_headache.stress_level = Int64(stress_level)
+                        new_headache.water_consumption = Int64(water_consumption)
                 
                     },
                     label: { Text("Done") }
