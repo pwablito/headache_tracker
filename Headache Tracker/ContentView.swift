@@ -6,7 +6,6 @@
 //
 import SwiftUI
 import CoreData
-import CareKitUI
 
 struct ContentView: View {
 

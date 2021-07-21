@@ -1,31 +1,34 @@
 //
-//  CreateSheet.swift
+//  HeadacheView.swift
 //  Headache Tracker
 //
-//  Created by Paul Spencer on 7/19/21.
+//  Created by Paul Spencer on 7/21/21.
 //
 
 import SwiftUI
+import CoreData
 import Combine
 
-struct CreateSheet: View {
+struct EditSheet: View {
     
     // For saving objects
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
     
     // For closing the sheet
     @Environment(\.presentationMode) var presentationMode
     
-    @State var severity: Int = 1
-    @State var stress_level: Int = 1
-    @State var notes: String = ""
-    @State var medication: String = ""
-    @State var start_time: Date = Date()
-    @State var end_time: Date = Date()
-    @State var ongoing: Bool = true
-    @State var water_consumption: String = ""
-    @State var sleep_hours: Int = 0
+    var headache: Headache
 
+    @State var severity: Int
+    @State var stress_level: Int
+    @State var notes: String
+    @State var medication: String
+    @State var start_time: Date
+    @State var end_time: Date
+    @State var ongoing: Bool
+    @State var water_consumption: String
+    @State var sleep_hours: Int
+    
     func close() {
         presentationMode.wrappedValue.dismiss()
     }
@@ -69,7 +72,7 @@ struct CreateSheet: View {
                     TextField("Notes", text: $notes)
                 }
             }
-            .navigationTitle("New Headache")
+            .navigationTitle("Edit Headache")
             .navigationBarItems(
                 leading: Button(
                     action: {
@@ -79,21 +82,19 @@ struct CreateSheet: View {
                 ),
                 trailing: Button(
                     action: {
-                        let new_headache = Headache(context: viewContext)
-                        new_headache.start_time = start_time
+                        headache.start_time = start_time
                         if !ongoing {
-                            new_headache.end_time = end_time
+                            headache.end_time = end_time
                         }
                         else {
-                            new_headache.end_time = nil
+                            headache.end_time = nil
                         }
-                        new_headache.severity = Int64(severity)
-                        new_headache.medication = medication
-                        new_headache.notes = notes
-                        new_headache.id = UUID()
-                        new_headache.stress_level = Int64(stress_level)
-                        new_headache.water_consumption = Int64(water_consumption) ?? 0
-                        new_headache.sleep_hours = Int64(sleep_hours)
+                        headache.severity = Int64(severity)
+                        headache.medication = medication
+                        headache.notes = notes
+                        headache.stress_level = Int64(stress_level)
+                        headache.water_consumption = Int64(water_consumption) ?? 0
+                        headache.sleep_hours = Int64(sleep_hours)
                         do {
                             try viewContext.save()
                             close()
