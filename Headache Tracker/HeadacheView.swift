@@ -10,7 +10,10 @@ import SwiftUI
 
 struct HeadacheView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var headache: Headache
+    @State var showEditSheet: Bool = false
     
     func format_date_time(date: Date?) -> String {
         if date == nil {
@@ -37,10 +40,26 @@ struct HeadacheView: View {
         .navigationBarItems(
             trailing: Button(
                 action: {
-                    print("Open edit sheet")
+                    self.showEditSheet = true
                 },
                 label: { Text("Edit") }
             )
         )
+        .sheet(isPresented: $showEditSheet, onDismiss: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            EditSheet(
+                headache: headache,
+                severity: Int(headache.severity),
+                stress_level: Int(headache.stress_level),
+                notes: headache.notes ?? "",
+                medication: headache.medication ?? "",
+                start_time: headache.start_time ?? Date(),
+                end_time: headache.end_time ?? Date(),
+                ongoing: (headache.end_time == nil),
+                water_consumption: String(headache.water_consumption),
+                sleep_hours: Int(headache.sleep_hours)
+            )
+        }
     }
 }

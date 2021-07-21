@@ -33,16 +33,15 @@ struct HeadachesView: View {
         NavigationView {
             List {
                 ForEach (headaches) { headache in
-                    NavigationLink(
-                        destination: HeadacheView(headache: headache)
-                    ) {
+                    NavigationLink(destination: HeadacheView(headache: headache)) {
                         HStack {
                             Text("Start: \(format_date(date: headache.start_time!))")
                             if headache.end_time != nil {
                                 let diffComponents = Calendar.current.dateComponents([.hour, .minute], from: headache.start_time!, to: headache.end_time!)
                                     let hours = diffComponents.hour
                                     let minutes = diffComponents.minute
-                                    Text("Duration: \(hours ?? 0):\(minutes ?? 0)")
+                                    let duration = Double(hours ?? 0) + (Double(minutes ?? 0) / 60.0)
+                                    Text("\(duration, specifier: "%.2f") hours")
                             } else {
                                 Text("Ongoing")
                                     .foregroundColor(Color.red)

@@ -14,6 +14,7 @@
 		DA2BAE4226A5AF1900E6468B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BAE4126A5AF1900E6468B /* Persistence.swift */; };
 		DA2BAE4526A5AF1900E6468B /* Headache_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA2BAE4326A5AF1900E6468B /* Headache_Tracker.xcdatamodeld */; };
 		DADE261E26A88D5300A25408 /* HeadacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE261D26A88D5300A25408 /* HeadacheView.swift */; };
+		DADE262226A8938400A25408 /* EditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE262126A8938400A25408 /* EditSheet.swift */; };
 		DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */; };
 		DAE0DB1226A6200D00821DB0 /* HeadachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */; };
 		DAE0DB1426A6221C00821DB0 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1326A6221C00821DB0 /* DataView.swift */; };
@@ -28,6 +29,7 @@
 		DA2BAE4126A5AF1900E6468B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DA2BAE4426A5AF1900E6468B /* Headache_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Headache_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		DADE261D26A88D5300A25408 /* HeadacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheView.swift; sourceTree = "<group>"; };
+		DADE262126A8938400A25408 /* EditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet.swift; sourceTree = "<group>"; };
 		DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSheet.swift; sourceTree = "<group>"; };
 		DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadachesView.swift; sourceTree = "<group>"; };
 		DAE0DB1326A6221C00821DB0 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF83E6B26A69B4E00335DB8 /* Headache Tracker.entitlements */,
+				DADE262126A8938400A25408 /* EditSheet.swift */,
 				DA2BAE3826A5AF1800E6468B /* Headache_TrackerApp.swift */,
 				DA2BAE3A26A5AF1800E6468B /* ContentView.swift */,
 				DAE0DB1326A6221C00821DB0 /* DataView.swift */,
@@ -171,6 +174,7 @@
 				DA2BAE4226A5AF1900E6468B /* Persistence.swift in Sources */,
 				DAE0DB1226A6200D00821DB0 /* HeadachesView.swift in Sources */,
 				DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */,
+				DADE262226A8938400A25408 /* EditSheet.swift in Sources */,
 				DADE261E26A88D5300A25408 /* HeadacheView.swift in Sources */,
 				DAE0DB1426A6221C00821DB0 /* DataView.swift in Sources */,
 				DA2BAE3B26A5AF1800E6468B /* ContentView.swift in Sources */,
