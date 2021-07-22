@@ -16,7 +16,7 @@ struct DataView: View {
 
     var headaches: FetchedResults<Headache>
 
-    @State private var rangeSize: Int = 1
+    @State private var rangeSize: Int = 31 // Start at a month
 
     func format_date(date: Date?) -> String {
         if date == nil {
@@ -49,7 +49,7 @@ struct DataView: View {
             dataPoints: points,
             legendTitle: "Stress (1-10)",
             pointStyle: PointStyle(),
-            style: LineStyle(lineColour: ColourStyle(colour: .red), lineType: .line)
+            style: LineStyle(lineColour: ColourStyle(colour: .red), lineType: .curvedLine)
         )
         
         let metadata = ChartMetadata(title: "Stress on Headache Days")
@@ -87,18 +87,17 @@ struct DataView: View {
     var body: some View {
         VStack {
             Picker("", selection: $rangeSize) {
-                Text("Day").tag(1)
                 Text("Week").tag(7)
                 Text("Month").tag(31)
+                Text("3 Month").tag(92)
                 Text("Year").tag(365)
-                Text("3 Years").tag(1095)
             }
             .pickerStyle(SegmentedPickerStyle())
-            .onChange(of: rangeSize) { newValue in
-                //TODO Update data for chart
-            }
             ScrollView {
                 let data = getData()
+                if data.dataSets.dataPoints.count < 2 {
+                    Text("Not enough data")
+                } else {
                 LineChart(chartData: data)
                     .pointMarkers(chartData: data)
                     .touchOverlay(chartData: data, specifier: "%.0f")
@@ -112,6 +111,7 @@ struct DataView: View {
                     .legends(chartData: data, columns: [GridItem(.flexible()), GridItem(.flexible())])
                     .id(data.id)
                     .frame(height: 400)
+                }
             }
         }
         .padding()
