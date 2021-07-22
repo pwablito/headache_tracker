@@ -15,6 +15,7 @@
 		DA2BAE4526A5AF1900E6468B /* Headache_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA2BAE4326A5AF1900E6468B /* Headache_Tracker.xcdatamodeld */; };
 		DADE261E26A88D5300A25408 /* HeadacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE261D26A88D5300A25408 /* HeadacheView.swift */; };
 		DADE262226A8938400A25408 /* EditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE262126A8938400A25408 /* EditSheet.swift */; };
+		DADE262826A8B9A000A25408 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DADE262726A8B9A000A25408 /* SwiftUICharts */; };
 		DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */; };
 		DAE0DB1226A6200D00821DB0 /* HeadachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */; };
 		DAE0DB1426A6221C00821DB0 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1326A6221C00821DB0 /* DataView.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADE262826A8B9A000A25408 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +116,9 @@
 			dependencies = (
 			);
 			name = "Headache Tracker";
+			packageProductDependencies = (
+				DADE262726A8B9A000A25408 /* SwiftUICharts */,
+			);
 			productName = "Headache Tracker";
 			productReference = DA2BAE3526A5AF1800E6468B /* Headache Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -143,7 +148,7 @@
 			);
 			mainGroup = DA2BAE2C26A5AF1800E6468B;
 			packageReferences = (
-				DAF83E6926A69A4B00335DB8 /* XCRemoteSwiftPackageReference "CareKit" */,
+				DADE262626A8B9A000A25408 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 			);
 			productRefGroup = DA2BAE3626A5AF1800E6468B /* Products */;
 			projectDirPath = "";
@@ -390,15 +395,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DAF83E6926A69A4B00335DB8 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+		DADE262626A8B9A000A25408 /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/carekit-apple/CareKit";
+			repositoryURL = "https://github.com/willdale/SwiftUICharts";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DADE262726A8B9A000A25408 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DADE262626A8B9A000A25408 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DA2BAE4326A5AF1900E6468B /* Headache_Tracker.xcdatamodeld */ = {
