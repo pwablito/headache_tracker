@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "list.bullet")
                     Text("Headaches")
                 }
-            DataView()
+            StressLevelDataView()
                 .tabItem {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                     Text("Trends")

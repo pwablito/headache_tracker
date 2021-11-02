@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUICharts
 import CoreData
 
-struct DataView: View {
+struct StressLevelDataView: View {
 
     @FetchRequest(entity: Headache.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Headache.start_time, ascending: true)])
 

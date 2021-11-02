@@ -16,9 +16,10 @@
 		DADE261E26A88D5300A25408 /* HeadacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE261D26A88D5300A25408 /* HeadacheView.swift */; };
 		DADE262226A8938400A25408 /* EditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE262126A8938400A25408 /* EditSheet.swift */; };
 		DADE262826A8B9A000A25408 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DADE262726A8B9A000A25408 /* SwiftUICharts */; };
+		DAE05955273A03CE00BD92FB /* StressLevelDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE05954273A03CE00BD92FB /* StressLevelDataView.swift */; };
 		DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */; };
 		DAE0DB1226A6200D00821DB0 /* HeadachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */; };
-		DAE0DB1426A6221C00821DB0 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DB1326A6221C00821DB0 /* DataView.swift */; };
+		DAF7878926C37D3700EDA31B /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = DAF7878826C37D3700EDA31B /* StockCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,9 @@
 		DA2BAE4426A5AF1900E6468B /* Headache_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Headache_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		DADE261D26A88D5300A25408 /* HeadacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadacheView.swift; sourceTree = "<group>"; };
 		DADE262126A8938400A25408 /* EditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet.swift; sourceTree = "<group>"; };
+		DAE05954273A03CE00BD92FB /* StressLevelDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressLevelDataView.swift; sourceTree = "<group>"; };
 		DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSheet.swift; sourceTree = "<group>"; };
 		DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadachesView.swift; sourceTree = "<group>"; };
-		DAE0DB1326A6221C00821DB0 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		DAF83E6B26A69B4E00335DB8 /* Headache Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Headache Tracker.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF7878926C37D3700EDA31B /* StockCharts in Frameworks */,
 				DADE262826A8B9A000A25408 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,11 +71,11 @@
 		DA2BAE3726A5AF1800E6468B /* Headache Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				DAE05954273A03CE00BD92FB /* StressLevelDataView.swift */,
 				DAF83E6B26A69B4E00335DB8 /* Headache Tracker.entitlements */,
 				DADE262126A8938400A25408 /* EditSheet.swift */,
 				DA2BAE3826A5AF1800E6468B /* Headache_TrackerApp.swift */,
 				DA2BAE3A26A5AF1800E6468B /* ContentView.swift */,
-				DAE0DB1326A6221C00821DB0 /* DataView.swift */,
 				DAE0DB1126A6200D00821DB0 /* HeadachesView.swift */,
 				DADE261D26A88D5300A25408 /* HeadacheView.swift */,
 				DAE0DB0D26A5C5C900821DB0 /* CreateSheet.swift */,
@@ -118,6 +120,7 @@
 			name = "Headache Tracker";
 			packageProductDependencies = (
 				DADE262726A8B9A000A25408 /* SwiftUICharts */,
+				DAF7878826C37D3700EDA31B /* StockCharts */,
 			);
 			productName = "Headache Tracker";
 			productReference = DA2BAE3526A5AF1800E6468B /* Headache Tracker.app */;
@@ -149,6 +152,7 @@
 			mainGroup = DA2BAE2C26A5AF1800E6468B;
 			packageReferences = (
 				DADE262626A8B9A000A25408 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+				DAF7878726C37D3700EDA31B /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = DA2BAE3626A5AF1800E6468B /* Products */;
 			projectDirPath = "";
@@ -177,11 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2BAE4226A5AF1900E6468B /* Persistence.swift in Sources */,
+				DAE05955273A03CE00BD92FB /* StressLevelDataView.swift in Sources */,
 				DAE0DB1226A6200D00821DB0 /* HeadachesView.swift in Sources */,
 				DAE0DB0E26A5C5C900821DB0 /* CreateSheet.swift in Sources */,
 				DADE262226A8938400A25408 /* EditSheet.swift in Sources */,
 				DADE261E26A88D5300A25408 /* HeadacheView.swift in Sources */,
-				DAE0DB1426A6221C00821DB0 /* DataView.swift in Sources */,
 				DA2BAE3B26A5AF1800E6468B /* ContentView.swift in Sources */,
 				DA2BAE3926A5AF1800E6468B /* Headache_TrackerApp.swift in Sources */,
 				DA2BAE4526A5AF1900E6468B /* Headache_Tracker.xcdatamodeld in Sources */,
@@ -403,6 +407,14 @@
 				kind = branch;
 			};
 		};
+		DAF7878726C37D3700EDA31B /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -410,6 +422,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DADE262626A8B9A000A25408 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
 			productName = SwiftUICharts;
+		};
+		DAF7878826C37D3700EDA31B /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF7878726C37D3700EDA31B /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 
